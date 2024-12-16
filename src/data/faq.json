@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is Job Portal? ",
+        "answer" : "Job Portal is an application that allows companies to post job listings and job seekers to get hired through online."
+    },
+    {
+        "question":"How do i post a job? ",
+        "answer":"As an employer, you can post job by navigating to the post job section."
+    },
+    {
+        "question":"How do i apply for job?",
+        "answer":"To apply for job , click on the job listing and follow application process."
+    }
+]
