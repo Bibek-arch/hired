@@ -118,7 +118,7 @@ if(!isLoaded || loadingCompanies ){
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
-                        {State.getStatesOfCountry("IN").map(({name})=>{          
+                        {State.getStatesOfCountry("NP").map(({name})=>{          
                         return(
                         <SelectItem key={name} value={name}>
                             {name}
