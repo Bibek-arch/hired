@@ -12,7 +12,7 @@ const LandingPage = () => {
   return (
     <main className='flex flex-col gap-10 sm:gap-20 py-10 sm:py-20'>
       <section className='text-center'>
-        <h1 className='flex flex-col items-center justify-center gradient-title text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4'>Find your Dream job <span className='flex items-center gap-2 sm:gap-6'>and get <img src="/logo1.png" alt="Hired logo " className='h-14 sm:h-24 lg:h-32' /> </span></h1>
+        <h1 className='flex flex-col items-center justify-center gradient-title text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4'>Find your Dream job <span className='flex items-center gap-2 sm:gap-6'>and get Hired </span></h1>
       </section>
       <div className='flex gap-6 justify-center'>
         {/* buttons */}
@@ -38,43 +38,42 @@ const LandingPage = () => {
       </CarouselContent>
     </Carousel>
       {/* banner */}
-      <img src="/banner.jpeg" className="w-full"/>
-      <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        {/* cards */}
-        <Card>
+      {/* <img src="/banner.jpeg" className="w-full"/> */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 max-w-7xl mx-auto w-full">
+        <Card className="bg-[#111] border border-gray-800">
           <CardHeader>
-            <CardTitle>For Job Seekers</CardTitle>
+            <CardTitle className="text-[#4169E1] text-2xl">For Job Seekers</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="text-gray-300">
             Search and apply for jobs, track applications and many more.
           </CardContent>
         </Card>
-        <Card>
+        <Card className="bg-[#111] border border-gray-800">
           <CardHeader>
-            <CardTitle>For Employers</CardTitle>
+            <CardTitle className="text-[#DC3545] text-2xl">For Employers</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p>Post jobs,manage applications, and find the best candidates</p>
+          <CardContent className="text-gray-300">
+            <p>Post jobs, manage applications, and find the best candidates</p>
           </CardContent>
         </Card>
-
       </section>
-      {/* Accordion */}
-      <Accordion type="single" collapsible>
-        {faqs.map((faq,index)=>{
-         return( <AccordionItem key= {index} value= {`item-${index+1}`}>
-          <AccordionTrigger>{faq.question}</AccordionTrigger>
-          <AccordionContent>
-            {faq.answer}
-          </AccordionContent>
-        </AccordionItem>
-         );
-        })}
-        
-      </Accordion>
+
+      <section className="max-w-3xl mx-auto w-full px-4">
+        <Accordion type="single" collapsible className="space-y-2">
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index + 1}`} className="bg-[#111] border border-gray-800">
+              <AccordionTrigger className="px-4 text-gray-200 hover:text-[#4169E1]">{faq.question}</AccordionTrigger>
+              <AccordionContent className="px-4 text-gray-400">{faq.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
 
     </main>
   )
 }
 
 export default LandingPage
+
+
+

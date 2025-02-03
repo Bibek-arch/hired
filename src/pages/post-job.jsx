@@ -20,6 +20,7 @@ import { z } from 'zod'
 
 const schema = z.object({
   title:z.string().min(1,{message:"Title is required"}),
+  salary:z.string().min(1,{message:"salary is required"}),
   description:z.string().min(1,{message:"Description is required"}),
   location:z.string().min(1,{message:"Select a location"}),
   company_id:z.string().min(1,{message:"Select or Add a new Company"}),
@@ -98,8 +99,8 @@ if(!isLoaded || loadingCompanies ){
          >
           <Input placeholder="Job Title" {...register("title")} />
           {errors.title && <p className='text-red-500'>{errors.title.message}</p>}
-        
-        
+          <Input placeholder="Salary" {...register("salary")} />
+         {errors.salary && <p className='text-red-500'>{errors.salary.message}</p>}
         <Textarea placeholder="Job Description" {...register("description")} />
         {errors.description && (
           <p className='text-red-500'>{errors.description.message}</p>

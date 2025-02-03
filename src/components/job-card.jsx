@@ -7,7 +7,6 @@ import { Button } from './ui/button';
 import { deleteJob, saveJob } from '@/api/apiJobs';
 import useFetch from '@/hooks/use-fetch';
 import { BarLoader } from 'react-spinners';
-
 const JobCard = ({
     job,
     isMyJob = false,
@@ -50,10 +49,14 @@ const JobCard = ({
    },[savedJob])
 
   return (
+    
    <Card className='flex flex-col'> 
+   
+
    {loadingDeleteJob && (
         <BarLoader className='mt-4' width={"100%"} color='#36d7b7'/>
     )}
+    
     <CardHeader>
         <CardTitle className="flex justify-between font-bold">
             {job.title}
@@ -75,6 +78,9 @@ const JobCard = ({
         </div>
         <hr />
         {job.description.substring(0, job.description.indexOf("."))}
+
+        {/* // add recommedations here */}
+
     </CardContent>
     <CardFooter className="flex gap-2">
         <Link to={`/job/${job.id}`} className='flex-1'>

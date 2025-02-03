@@ -99,7 +99,9 @@ const JobPage = () => {
 
       <h2 className='text-2xl sm:text-3xl font-bold'>About the job</h2>   
       <p className='sm:text-lg'>{job?.description}</p>
-
+      <p className='sm:text-lg'>
+  Salary: {job?.salary ? `${job.salary}` : 0}
+</p>
       <h2 className='text-2xl sm:text-3xl font-bold'>
         What we are looking for 
       </h2>
